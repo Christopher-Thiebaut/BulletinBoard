@@ -34,6 +34,9 @@
                                     <state key="normal" title="Post">
                                         <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="postButtonTapped:" destination="iXa-Bg-4tw" eventType="touchUpInside" id="KWc-qN-iil"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,7 +49,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="PyM-6k-UTK" detailTextLabel="VKD-Pg-epQ" style="IBUITableViewCellStyleValue1" id="HcG-q6-JlT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" textLabel="PyM-6k-UTK" detailTextLabel="VKD-Pg-epQ" style="IBUITableViewCellStyleValue1" id="HcG-q6-JlT">
                                 <rect key="frame" x="0.0" y="80" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HcG-q6-JlT" id="xQm-mV-8Yg">
@@ -77,6 +80,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="sa3-fH-rHv"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="jnf-5N-S1x" id="Qv3-gx-2IC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAl-zf-q95" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

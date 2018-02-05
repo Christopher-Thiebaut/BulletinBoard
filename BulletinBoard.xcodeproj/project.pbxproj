@@ -13,6 +13,10 @@
 		B3E7834B2028C7A700C7C412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E783492028C7A700C7C412 /* LaunchScreen.storyboard */; };
 		B3E7835B2028C93900C7C412 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E7835A2028C93900C7C412 /* CloudKit.framework */; };
 		B3E7835E2028CD4700C7C412 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E7835D2028CD4700C7C412 /* MainTableViewController.swift */; };
+		B3E783602028CF5B00C7C412 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E7835F2028CF5B00C7C412 /* Message.swift */; };
+		B3E783622028D18B00C7C412 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E783612028D18B00C7C412 /* Constants.swift */; };
+		B3E783642028D46000C7C412 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E783632028D46000C7C412 /* MessageController.swift */; };
+		B3E783662028D59B00C7C412 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E783652028D59B00C7C412 /* CloudKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		B3E783522028C7E700C7C412 /* BulletinBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BulletinBoard.entitlements; sourceTree = "<group>"; };
 		B3E7835A2028C93900C7C412 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B3E7835D2028CD4700C7C412 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		B3E7835F2028CF5B00C7C412 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B3E783612028D18B00C7C412 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B3E783632028D46000C7C412 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		B3E783652028D59B00C7C412 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,10 @@
 				B3E783442028C7A700C7C412 /* Main.storyboard */,
 				B3E7835C2028CCA000C7C412 /* Resources */,
 				B3E7835D2028CD4700C7C412 /* MainTableViewController.swift */,
+				B3E7835F2028CF5B00C7C412 /* Message.swift */,
+				B3E783612028D18B00C7C412 /* Constants.swift */,
+				B3E783632028D46000C7C412 /* MessageController.swift */,
+				B3E783652028D59B00C7C412 /* CloudKitManager.swift */,
 			);
 			path = BulletinBoard;
 			sourceTree = "<group>";
@@ -166,8 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E783602028CF5B00C7C412 /* Message.swift in Sources */,
 				B3E7835E2028CD4700C7C412 /* MainTableViewController.swift in Sources */,
+				B3E783662028D59B00C7C412 /* CloudKitManager.swift in Sources */,
+				B3E783642028D46000C7C412 /* MessageController.swift in Sources */,
 				B3E783412028C7A700C7C412 /* AppDelegate.swift in Sources */,
+				B3E783622028D18B00C7C412 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
