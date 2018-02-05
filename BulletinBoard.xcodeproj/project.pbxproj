@@ -8,20 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		B3E783412028C7A700C7C412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E783402028C7A700C7C412 /* AppDelegate.swift */; };
-		B3E783432028C7A700C7C412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E783422028C7A700C7C412 /* ViewController.swift */; };
 		B3E783462028C7A700C7C412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E783442028C7A700C7C412 /* Main.storyboard */; };
 		B3E783482028C7A700C7C412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E783472028C7A700C7C412 /* Assets.xcassets */; };
 		B3E7834B2028C7A700C7C412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E783492028C7A700C7C412 /* LaunchScreen.storyboard */; };
+		B3E7835B2028C93900C7C412 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E7835A2028C93900C7C412 /* CloudKit.framework */; };
+		B3E7835E2028CD4700C7C412 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E7835D2028CD4700C7C412 /* MainTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B3E7833D2028C7A700C7C412 /* BulletinBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulletinBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E783402028C7A700C7C412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3E783422028C7A700C7C412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B3E783452028C7A700C7C412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3E783472028C7A700C7C412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E7834A2028C7A700C7C412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3E7834C2028C7A800C7C412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3E783522028C7E700C7C412 /* BulletinBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BulletinBoard.entitlements; sourceTree = "<group>"; };
+		B3E7835A2028C93900C7C412 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B3E7835D2028CD4700C7C412 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E7835B2028C93900C7C412 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				B3E7833F2028C7A700C7C412 /* BulletinBoard */,
 				B3E7833E2028C7A700C7C412 /* Products */,
+				B3E783532028C7EE00C7C412 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +59,31 @@
 		B3E7833F2028C7A700C7C412 /* BulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
+				B3E783522028C7E700C7C412 /* BulletinBoard.entitlements */,
 				B3E783402028C7A700C7C412 /* AppDelegate.swift */,
-				B3E783422028C7A700C7C412 /* ViewController.swift */,
 				B3E783442028C7A700C7C412 /* Main.storyboard */,
+				B3E7835C2028CCA000C7C412 /* Resources */,
+				B3E7835D2028CD4700C7C412 /* MainTableViewController.swift */,
+			);
+			path = BulletinBoard;
+			sourceTree = "<group>";
+		};
+		B3E783532028C7EE00C7C412 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3E7835A2028C93900C7C412 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3E7835C2028CCA000C7C412 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				B3E783472028C7A700C7C412 /* Assets.xcassets */,
 				B3E783492028C7A700C7C412 /* LaunchScreen.storyboard */,
 				B3E7834C2028C7A800C7C412 /* Info.plist */,
 			);
-			path = BulletinBoard;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +119,14 @@
 					B3E7833C2028C7A700C7C412 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,7 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E783432028C7A700C7C412 /* ViewController.swift in Sources */,
+				B3E7835E2028CD4700C7C412 /* MainTableViewController.swift in Sources */,
 				B3E783412028C7A700C7C412 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,11 +304,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BulletinBoard/BulletinBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JM5E6M7XJW;
-				INFOPLIST_FILE = BulletinBoard/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BulletinBoard/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.christopherthiebaut.BulletinBoard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christopherthiebaut.unused.BulletinBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -289,11 +320,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BulletinBoard/BulletinBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JM5E6M7XJW;
-				INFOPLIST_FILE = BulletinBoard/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BulletinBoard/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.christopherthiebaut.BulletinBoard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.christopherthiebaut.unused.BulletinBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
