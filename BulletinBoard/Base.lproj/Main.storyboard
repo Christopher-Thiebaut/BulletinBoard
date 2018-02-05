@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Bulletin Board-->
         <scene sceneID="q0H-NY-15s">
             <objects>
                 <tableViewController id="iXa-Bg-4tw" customClass="MainTableViewController" customModule="BulletinBoard" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                             <outlet property="delegate" destination="iXa-Bg-4tw" id="7r4-qO-po3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="sa3-fH-rHv"/>
+                    <navigationItem key="navigationItem" title="Bulletin Board" id="sa3-fH-rHv"/>
                     <connections>
                         <outlet property="messageTextField" destination="jnf-5N-S1x" id="Qv3-gx-2IC"/>
                     </connections>

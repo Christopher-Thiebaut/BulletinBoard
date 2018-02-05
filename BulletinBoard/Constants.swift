@@ -14,3 +14,7 @@ enum CloudKitKeys {
     static let text = "Text"
     static let date = "Date"
 }
+
+enum NotificationKeys {
+    static let messagesUpdated = Notification.Name(rawValue: "MessagesUpdated")
+}

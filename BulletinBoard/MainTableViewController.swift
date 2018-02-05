@@ -11,11 +11,16 @@ import UIKit
 class MainTableViewController: UITableViewController {
 
     @IBOutlet weak var messageTextField: UITextField!
+    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //Listen for message and act accordingly.
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTable), name: NotificationKeys.messagesUpdated, object: nil)
+        
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateStyle = .short
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,7 +34,7 @@ class MainTableViewController: UITableViewController {
         // Configure the cell...
         let message = MessageController.shared.messages[indexPath.row]
         cell.textLabel?.text = message.text
-        cell.detailTextLabel?.text = message.date.description
+        cell.detailTextLabel?.text = dateFormatter.string(from: message.date)
 
         return cell
     }
@@ -42,4 +47,10 @@ class MainTableViewController: UITableViewController {
         MessageController.shared.saveNewMessage(withText: text)
     }
     
+    @objc private func updateTable(){
+        DispatchQueue.main.async {[weak self] in
+            self?.tableView.reloadData()
+            self?.messageTextField.text = nil
+        }
+    }
 }

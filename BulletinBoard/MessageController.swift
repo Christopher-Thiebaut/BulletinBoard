@@ -14,6 +14,7 @@ class MessageController {
     var messages: [Message] = [] {
         didSet {
             //Send notification to anyone listening for this change.
+            NotificationCenter.default.post(name: NotificationKeys.messagesUpdated, object: self)
         }
     }
     
@@ -24,8 +25,13 @@ class MessageController {
     //save a new message
     func saveNewMessage(withText text: String){
         let message = Message(text: text)
-        messages.append(message)
-        CloudKitManager.save(message: message)
+        CloudKitManager.save(message: message) {[weak self] (success) in
+            if success {
+                self?.messages.insert(message, at: 0)
+            }else{
+                print("Did not add new message locally because it could not be inserted to cloudkit.")
+            }
+        }
     }
     
     func loadMessages(){
